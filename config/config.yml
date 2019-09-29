@@ -1,0 +1,2 @@
+mysql:
+  DBUrl: root:@(localhost)/geek?charset=utf8&parseTime=True&loc=Local
