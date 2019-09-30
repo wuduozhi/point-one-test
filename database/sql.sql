@@ -15,9 +15,11 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 
+// 存被 at 的人与 weibo，user 的信息
 CREATE TABLE `at_user_weibo_refs` (
 	`id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
 	`at_user_id` bigint(20) DEFAULT NULL,
+	`user_id`  bigint(20) DEFAULT NULL,
 	`weibo_id` bigint(20) DEFAULT NULL,
 	PRIMARY KEY (`id`)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

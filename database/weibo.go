@@ -28,3 +28,10 @@ func CreateWeibo(tx *gorm.DB, weibo *Weibo) error {
 
 	return err
 }
+
+func GetWeibosByUserIDs(userIDs []int64) ([]Weibo, error) {
+	var weibos []Weibo
+	err := DB.Model(&Weibo{}).Where("user_id in (?)", userIDs).Find(&weibos).Error
+
+	return weibos, err
+}

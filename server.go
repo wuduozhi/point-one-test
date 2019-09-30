@@ -27,7 +27,7 @@ func main() {
 	})
 
 	r.POST("/weibo", service.AddWeibo)
-
+	r.GET("/suggest/:userID", service.GetSuggest)
 	r.Run() // listen and serve on 0.0.0.0:8080
 }
 
